@@ -33,7 +33,6 @@ for root, dirs, files in os.walk(r'C:\Users\rajashekhar.pbr\OneDrive - Accenture
                                     else:
                                         org_words.append(word)
         if file.endswith('.docx'):
-            continue
             doc_text = docx2txt.process(root+'\\'+file)
             doc_text1 = re.sub('[^A-Za-z0-9]+',' ',doc_text)
             test_words = TextBlob(doc_text1).words
